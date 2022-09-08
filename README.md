@@ -189,25 +189,28 @@ As we can see none of the independent varible having high co-relation with each 
 
 
  
-Model Building 
+# SMOTE Oversampling
+
+![smote](https://user-images.githubusercontent.com/103363862/189169974-a1dc3316-d92f-45fc-907a-5ec2ac0aaabe.png)
  
+
 To start with building first we dealt with highly imbalanced data using SMOTE and then feature standardization. 
 
 The target variable contains highly imbalanced labeled data in the 88:12 ratio. Using SMOTE which is basically used to create synthetic class samples of minority class to balance the distribution of target variable. The target variable balanced for modeling. 
-Before Over Sampling, counts: Features (35767, 43) and Label (35767,)
-0    31570
-1     4197
-Name: y, dtype: int64
-0    7893
-1    1049
-Name: y, dtype: int64
-After Over Sampling, counts: Features (63140, 43) and Label (63140,)
-0    31570
-1    31570
-Name: y, dtype: int64
 
-Feature Standardization 
+Original Dataset length 45211
+Dataset length after SMOTE Oversampling  79844
+
+# Feature Standardization 
+
+![stderd](https://user-images.githubusercontent.com/103363862/189170623-5b3268e8-b254-4f3a-99e3-f8ac4129c8ae.png)
+
+
 Standardization typically means rescales data to have mean of 0 and standard deviations of 1. To bring all values from independent variables in same scale. Using standard scalar, the independent variables transformed. 
+
+# Model Building 
+
+![model building](https://user-images.githubusercontent.com/103363862/189169286-d1ec9f56-20f8-4d4d-bfc2-58a336d1251a.png)
  
 There are several classification models available for prediction/classification. In this project we used following models for classification Algorithm’s 
 KNN 
