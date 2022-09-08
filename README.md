@@ -146,10 +146,18 @@ when a clients are self employed and entrepreneur we can see less probability fo
 
 Feature engineering is one of the important steps in model building and thus we focused more into it. We performed the following in feature engineering.
 
+# Frequency Based Counting
+
+we used frequency based counting feature engineering method for 'Month' predictor variable because these data comes into tha category of nominal data so if we use one hot encoding in that then they form 12 column and out machine learning model get confused and there is possibility that it gets baised towards "month' Column.
+
+Also we use one hot encoding for marital,cantact,p-outcome.cat_age,new job ,education to convert categorical features into numeric.
+
  
 
 
 # Dealing with outliers 
+
+![out 4](https://user-images.githubusercontent.com/103363862/189168630-bdb3de2c-1e40-4d7a-ab7a-6388eacc3895.png)
 
 
 After looking at the plots above we removed the outliers 
@@ -162,6 +170,10 @@ In previous we removed observations for previous contacts> 11
 
 
 # Correlation Map
+
+![corelation map](https://user-images.githubusercontent.com/103363862/189165921-e299b008-c2ad-450a-8b47-80bdafd26bab.png)
+
+As we can see none of the independent varible having high co-relation with each other also dosn't have high co-relation with our target variable because of that machine learning model does not get baised because of co-relation problem.
 
 
 
