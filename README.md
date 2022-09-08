@@ -1,6 +1,6 @@
-# Bank-Marketing-Effectiveness-Prediction--Supervised-machne-learning--Classification
+# Bank Marketing Effectiveness Prediction
 
-     Data Science Trainees
+![bank - Copy](https://user-images.githubusercontent.com/103363862/189132949-fcc48560-3a8b-4261-9569-0c5650afbf04.jpeg)
 
 Abstract 
 Finance industry is one of the leading industries globally and have the potential to bring huge impact in the growth of nation. Thus, it is important to analyze the data or information that banking sector records about the clients. This data can be used to create connection and keep professional relationship with the customers in order to target them individually for any banking schemes. Usually, the selected customers are contacted directly through: personal contact, telephone cellular, email or any other means of contact to advertise the new services or give an offer. This kind of marketing is called direct marketing and is one of the leading marketing techniques. 
@@ -11,6 +11,8 @@ Keywords: Supervised Machine Learning, Classification, Predictions, duration.
  
 1. Problem Statement 
 The given dataset is of a direct marketing campaign (Phone Calls) of a Portuguese banking institution. The classification goal is to predict if the client will subscribe a term deposit (Target variable y). 
+
+![problem](https://user-images.githubusercontent.com/103363862/189133132-91a2a2ee-14d8-4709-8eab-5453306d2a28.png)
  
  
 We were provided with following dataset: 
@@ -73,12 +75,11 @@ b)
 
 c)
  
-      55.58 % of clients having housing loan and 44.42 % of clients doesnot having any housing loan     
+55.58 % of clients having housing loan and 44.42 % of clients doesnot having any housing loan     
        
         d)
-       
-        51.32 % of clients are in the category of secondary education.
-        % of clients who are in the category of primary education(15.15%) is very less.
+ 51.32 % of clients are in the category of secondary education.
+  % of clients who are in the category of primary education(15.15%) is very less.
        
          
       
