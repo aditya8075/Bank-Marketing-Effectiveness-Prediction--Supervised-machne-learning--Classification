@@ -1,6 +1,6 @@
 # Bank Marketing Effectiveness Prediction
 
-![bank 2](https://user-images.githubusercontent.com/103363862/189156691-1adfac48-190e-4915-bcfe-1498c25f95cd.jpg)
+![bbb](https://user-images.githubusercontent.com/103363862/189176478-254a346c-4c55-41a5-90c1-8e2c8fc20361.jpg)
 
 # Abstract 
 
