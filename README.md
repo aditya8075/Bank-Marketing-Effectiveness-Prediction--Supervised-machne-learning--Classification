@@ -1,20 +1,29 @@
 # Bank Marketing Effectiveness Prediction
 
-![bank - Copy](https://user-images.githubusercontent.com/103363862/189132949-fcc48560-3a8b-4261-9569-0c5650afbf04.jpeg)
+![bank 2](https://user-images.githubusercontent.com/103363862/189156691-1adfac48-190e-4915-bcfe-1498c25f95cd.jpg)
 
-Abstract 
-Finance industry is one of the leading industries globally and have the potential to bring huge impact in the growth of nation. Thus, it is important to analyze the data or information that banking sector records about the clients. This data can be used to create connection and keep professional relationship with the customers in order to target them individually for any banking schemes. Usually, the selected customers are contacted directly through: personal contact, telephone cellular, email or any other means of contact to advertise the new services or give an offer. This kind of marketing is called direct marketing and is one of the leading marketing techniques. 
+# Abstract 
+
+
+Finance industry is one of the leading industries globally and have the potential to bring huge impact in the growth of nation. 
+
+Thus, it is important to analyze the data or information that banking sector records about the clients. This data can be used to create connection and keep professional relationship with the customers in order to target them individually for any banking schemes. Usually, the selected customers are contacted directly through: personal contact, telephone cellular, email or any other means of contact to advertise the new services or give an offer. 
+
+This kind of marketing is called direct marketing and is one of the leading marketing techniques. 
+
+
 Thus, in this project we trained a model that can predict that whether the client will opt for a term deposit or not using given bank-client data, data related with the last contact of the current campaign and some other useful 
 attributes 
  
-Keywords: Supervised Machine Learning, Classification, Predictions, duration. 
+
  
-1. Problem Statement 
+# Problem Statement 
 The given dataset is of a direct marketing campaign (Phone Calls) of a Portuguese banking institution. The classification goal is to predict if the client will subscribe a term deposit (Target variable y). 
 
 ![problem](https://user-images.githubusercontent.com/103363862/189133132-91a2a2ee-14d8-4709-8eab-5453306d2a28.png)
  
  
+
 We were provided with following dataset: 
  
 Bank Client data: 
@@ -40,103 +49,129 @@ Output variable (desired target):
  
 y - has the client subscribed a term deposit? (binary: 'yes','no') 
  
-2. Introduction 
+# Introduction 
+
+![m 3](https://user-images.githubusercontent.com/103363862/189158515-c1a1c6b9-33e4-4507-9c49-9fa984b73ca9.jpg)
+
+
  
-Marketing is the most common method which many companies are using to sell their products, services and reach out to the potential customers to increase their sales. Telemarketing is one of them and most useful way of doing marketing for increasing business and build good relationship with customers to get business for a company. It’s also important to select and follow up with those customers who are most likely to subscribe product or service. There are many classification models, such as Logistic Regression, Decision Trees, Random Forest, KNN, ANN and Support Vector Machines (SVM) that can be used for classification prediction. 
+Marketing is the most common method which many companies are using to sell their products, services and reach out to the potential customers to increase their sales. Telemarketing is one of them and most useful way of doing marketing for increasing business and build good relationship with customers to get business for a company. 
+
+It’s also important to select and follow up with those customers who are most likely to subscribe product or service. There are many classification models, such as Logistic Regression, Decision Trees, Random Forest, KNN, ANN and Support Vector Machines (SVM) that can be used for classification prediction. 
  
-3. Classification Approach 
+# Classification Approach 
  
 After understanding the problem statement, we loaded the dataset for following operations: 
  
+
 Data Exploration 
+
 Exploratory Data Analysis 
+
 Feature Engineering 
+
 Feature selection 
+
 Balancing Target Feature 
+
 Building Model 
+
 Hyperparameter Tuning 
  
 Dataset Exploration 
  
-The given dataset was initially loaded for a quick overview. It was observed that our dataset contains 45211 records and 17 features. Datatypes of features was then checked and it was found that there are 7 numerical (int) and 10 Categorical (object) datatypes among which no null values and duplicated records were found in our dataset. 
+The given dataset was initially loaded for a quick overview. 
+
+It was observed that our dataset contains 45211 records and 17 features. Datatypes of features was then checked and it was found that there are 7 numerical (int) and 10 Categorical (object) datatypes among which no null values and duplicated records were found in our dataset. 
  
-Exploratory Data Analysis 
+# Exploratory Data Analysis 
+
+![eda 2](https://user-images.githubusercontent.com/103363862/189159523-33f7549b-b5e5-42a1-b595-b81d9676900b.jpg)
  
 After data wrangling, we did univariate and multivariate analysis on features to understand their pattern and how they relate with target class.  
  
-Univariate Analysis                                                                                                                                                                                                                   
-a)
-                                  
-From above pie chart 98.20 % clients have not any credit default only 1.80% of clients have default in credit. 
 
-b)
-
-83.98 % of clients having personal load and 16.02 % clients have not any personal loan.
-
-c)
- 
-55.58 % of clients having housing loan and 44.42 % of clients doesnot having any housing loan     
-       
-        d)
- 51.32 % of clients are in the category of secondary education.
-  % of clients who are in the category of primary education(15.15%) is very less.
        
          
       
-Bivariate Analysis 
+# Analysis 
+
+we can conclude that when the client age categories are 'stable' ,'old age' and 'about to retire' then their is very high possibilty that those category person subscribe for a term deposit. when clients category is struggling and counting last breathe then there is very less possibility that a customer subscribe for term deposit
+
+Bank has not contacted most of the clients ,the clients which bank not contacted before have high posibility that they suscribe for term deposite than a client which bank contacted before.
+
+Most of the clients in our dataset was not credit defaulter so that when the client has credit is not in default then there is high possibility that customer suscribe for term deposite.
+
+when the client is credit default there is very less possibility that a customer suscribe for term deposite.
+
+we can roughly conclude that when that balance was from 500-35000 (in the middle range) then those customer subscribed for the term deposit so we can say that high balance or low balance will not be predict that client will subscribed for term deposit or not
+
+
+we can see that the pdays have most of the values are 0 and less than 0 so we have to drop that column for better prediction of our mode
  
    
 
-From the above count plot we can conclude that when contact communication type is cellular then there is high possibility that the client subscribe a term deposit hence the bank should contact the customer by cellular type mostly.
+we can conclude that when contact communication type is cellular then there is high possibility that the client subscribe a term deposit hence the bank should contact the customer by cellular type mostly.
+
+
 when the contact communication type is telephone then there was very less possibility that the client subscribe a term deposit.
 
 
-From the above bar plot we can conclude that when the customer education is tertiary and secondary then there is a high possibility that client subscribe a term deposit hence bank should approach mostly to the tertiary and secondary class education client to subscribe for term deposit.
+we can conclude that when the customer education is tertiary and secondary then there is a high possibility that client subscribe a term deposit hence bank should approach mostly to the tertiary and secondary class education client to subscribe for term deposit.
+
 When the education of the customer is unknown and primary those client have very low possibility to subscribe for term deposit.
 
 
 
 Most of the clients who are married and single had subscribed for the term deposit therefore , When marital status of client is 'Single' and 'married' then there are high possibility that those clients subscribe a term deposit .Bank should target 'single' and 'married' client both to subscribe for term deposit.
 
+
 when clients marital status was devorced those clients did not subscribe for the term deposit much that’s why , When the client marital status is divorced then there is very less chance that these clients agrees to subscribe for term deposit.
+
 
 
 Most of clients are from the job called as 'blue collar, management, technician and admin, when the client jobs are Management , technician, blue_ collar, admin services the there is high chance that those customers subscribe for term deposit so that bank should prefer salaried persons most to approach for term deposit.
 
+
 when the client is retired person we can see high probability to subscribe term deposit hence retired client has high possibility that they subscribe for term deposit bank should communicate  mostly to retired person to subscribe for term deposit.
+
 
 when a clients are self employed and entrepreneur we can see less probability for subscribe to term deposit as well as when a clients have a category house maid , unemployed and student and unknows there are least possibility that those customers agree to subscribe for term deposit.
 
-3.3 Feature Engineering Feature engineering is one of the important steps in model building and thus we focused more into it. We performed the following in feature engineering 
+# Feature Engineering
+
+![fe 2](https://user-images.githubusercontent.com/103363862/189163467-812dd9af-6033-4246-b2ec-ca137273e859.png)
+
+
+
+Feature engineering is one of the important steps in model building and thus we focused more into it. We performed the following in feature engineering.
+
  
-a) Dealing with outliers  
+
+
+# Dealing with outliers 
+
+
 After looking at the plots above we removed the outliers 
+
 In duration we removed those observation with no output and duration> 2000s 
+
 In campaign we removed campaigns> 20 
+
 In previous we removed observations for previous contacts> 11 
 
 
+# Correlation Map
 
 
-from the above plot we can conclude that when the client age categories are 'stable' ,'old age' and 'about to retire' then their is very high possibilty that those category person subscribe for a term deposit.
-when clients category is struggling and counting last breathe then there is very less possibility that a customer subscribe for term deposit
 
 
-from the following plot bank has not contacted most of the clients ,the clients which bank not contacted before have high posibility that they suscribe for term deposite than a client which bank contacted before.
 
-        
-
-
-Most of the clients in our dataset was not credit defaulter so that when the client has credit is not in default then there is high possibility that customer suscribe for term deposite.
-   when the client is credit default there is very less possibility that a customer suscribe for term deposite.
 
      
-                From the above plot we can roughly conclude that when that balance was from 500-35000 (in the middle range) then those customer subscribed for the term deposit so we can say that high                      balance or low balance will not be predict that client will subscribed for term deposit or not
 
-      
-From the above plot we can see that the pdays have most of the values are 0 and less than 0 so we have to drop that column for better prediction of our model
 
-3.4)  Correlation Map
+
 
 
 
