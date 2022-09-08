@@ -212,132 +212,160 @@ Standardization typically means rescales data to have mean of 0 and standard dev
 
 ![model building](https://user-images.githubusercontent.com/103363862/189169286-d1ec9f56-20f8-4d4d-bfc2-58a336d1251a.png)
  
-There are several classification models available for prediction/classification. In this project we used following models for classification Algorithm’s 
+
+There are several classification models available for prediction/classification. 
+
+In this project we used following models for classification Algorithm’s 
+
 KNN 
+
 Random Forest 
+
 XGBOOST
+
 XGBOOST with Hyperparameter tunning
-3.6.1   K-Nearest neighbors (KNN) 
-K-Nearest Neighbor is a non-parametric supervised learning algorithm both for classification and regression. The principle is to find the predefined number of training samples closest to the new point and predict the correct label from these training sample. It’s a simple and robust algorithm and effective in large training datasets. 
+
+
+#K-Nearest neighbors (KNN) 
+
+
+
+K-Nearest Neighbor is a non-parametric supervised learning algorithm both for classification and regression. The principle is to find the predefined number of training samples closest to the new point and predict the correct label from these training sample. 
+
+It’s a simple and robust algorithm and effective in large training datasets. 
+
 Following are steps involved in KNN. 
+
 Select the K value.  
+
 Calculate the Euclidean distance between new point and training point. 
+
 According to the similarity in training data points, distance and K value the new data point gets assigned to the majority class.
-Cross validation score [0.76655256 ,0.7773232  , 0.77723971,  0.78239813, 0.7752171 ]
+
+Cross_validation score [0.76655256 0.7773232  0.77723971 0.78239813 0.7752171 ]
 KNN Test accuracy Score 0.7889885276288763
-              Precision    Recall   f1-score   support
- 
+              precision    recall  f1-score   support
+
            0       0.84      0.71      0.77      9981
-           1       0.75      0.87      0.80      9980
- 
-    Accuracy                           0.79     19961
-   Macro avg       0.80      0.79      0.79     19961
-Weighted vag       0.80      0.79      0.79     19961
- 
-array([[7080, 2901],
-       [1311, 8669]])
+           1       0.75      0.87      0.80      998
+
+
 
  
  
 
-3.6.2 Random Forest 
-Random forest is a Decision Tree based algorithm. It’s a supervised learning algorithm. This algorithm can solve both type of problems i.e. classification and regression. Decision Trees are flexible and it often gets overfitted. To overcome this challenge Random Forest helps to make classifications more efficiently. It creates a number of decision trees from a randomly selected subset of the training set and averages the-final outcome. Its accuracy is generally high. Random forest has ability to handle large number of input variables. 
-Cross  Validation score [0.89997495 0.90030893 0.89922351 0.8995491  0.90405812]
-Random Forest Test accuracy Score 0.9070186864385552
-              Precision    recall  f1-score   support
- 
+# Random Forest 
+Random forest is a Decision Tree based algorithm. It’s a supervised learning algorithm. This algorithm can solve both type of problems i.e. classification and regression. Decision Trees are flexible and it often gets overfitted. 
+
+To overcome this challenge Random Forest helps to make classifications more efficiently. 
+
+It creates a number of decision trees from a randomly selected subset of the training set and averages the-final outcome. Its accuracy is generally high. Random forest has ability to handle large number of input variables. 
+
+Cross_validation score [0.89997495 0.90030893 0.89922351 0.8995491  0.90405812]
+RandomForest Test accuracy Score 0.9070186864385552
+              precision    recall  f1-score   support
+
            0       0.87      0.96      0.91      9981
            1       0.95      0.86      0.90      9980
- 
-    accuracy                           0.91     19961
-   macro avg       0.91      0.91      0.91     19961
-weighted avg       0.91      0.91      0.91     19961
- 
-array([[9533,  448],
-       [1408, 8572]])
 
 
 
-XGBOOST
-XGboost is the most widely used algorithm in machine learning, whether the problem is a classification or a regression problem. It is known for its good performance as compared to all other machine learning algorithms.
-          Cross validation score [0.93186942 0.93270435 0.93170243, 0.9261022 , 0.93470274]
-Test accuracy Score 0.9356244677120384
+
+# XGBOOST
+XGboost is the most widely used algorithm in machine learning, whether the problem is a classification or a regression problem. 
+
+It is known for its good performance as compared to all other machine learning algorithms.
+
+Cross_validation score [0.93186942 0.93270435 0.93170243 0.9261022  0.93470274]
+xgb Test accuracy Score 0.9356244677120384
               precision    recall  f1-score   support
- 
+
            0       0.90      0.98      0.94      9981
            1       0.97      0.90      0.93      9980
- 
-    accuracy                           0.94     19961
-   macro avg       0.94      0.94      0.94     19961
-weighted avg       0.94      0.94      0.94     19961
- 
-array([[9734,  247],
-       [1038, 8942]])
- 
 
 
-Hyperparameter tuning of XG Boost Classifier
-Cross validation score [0.93137419 0.93454667 0.93270997 0.93737475 0.93269873 0.93102872
+
+
+# Hyperparameter tuning of XG Boost Classifier
+
+Cross_validation score [0.93137419 0.93454667 0.93270997 0.93737475 0.93269873 0.93102872
  0.92334669 0.93036072 0.93670675 0.93219773]
 xgb_hypertuned Test accuracy Score 0.9358749561645208
               precision    recall  f1-score   support
- 
+
            0       0.91      0.97      0.94      9981
            1       0.97      0.90      0.93      9980
- 
-    accuracy                           0.94     19961
-   macro avg       0.94      0.94      0.94     19961
-weighted avg       0.94      0.94      0.94     19961
- 
-array([[9663,  318],
-       [ 962, 9018]])
 
 
 
-4.Model Evaluation 
-For classification problems we have different metrics to measure and analyze the model’s performance.  In highly imbalanced target feature accuracy metrics doesn’t represents true reality of model.  
-4.1 Confusion Matrix 
+
+# Model Evaluation 
+For classification problems we have different metrics to measure and analyze the model’s performance.  
+
+In highly imbalanced target feature accuracy metrics doesn’t represents true reality of model.  
+
+# Confusion Matrix 
  
-The confusion matrix is a tabular form  metrics which tell us the truth labels classified versus to the model predicted labels. True Positive signifies the how many positive classes samples model able to predict correctly. True Negatives signifies how many negative class samples the model predicted correctly.  
+The confusion matrix is a tabular form  metrics which tell us the truth labels classified versus to the model predicted labels. True Positive signifies the how many positive classes samples model able to predict correctly. True Negatives signifies how many negative class samples the model predicted correctly.
+
+![cm](https://user-images.githubusercontent.com/103363862/189174232-2a423f0f-6f2a-4932-a7bb-858ebb13d28c.png)
  
-4.2 Precision/Recall  
+# Precision/Recall  
 Precision is the ratio of correct positive predictions to the overall number of positive predictions: TP/TP+FP. It focus on Type 1 error. 
 Recall is the ratio of correct positive predictions to the overall number of positive examples in the set: TP/FN+TP 
  
-4.3 Accuracy 
+# Accuracy 
 Accuracy is one of the simplest metrics to use. It’s defined as the number of correct predictions divided by the total number of predictions and multiplied by 100. 
 
-4.4 AUC ROC  Score
-AUC - ROC curve is a performance measurement for the classification problems at various threshold settings. ROC is a probability curve and AUC represents the degree or measure of separability. It tells how much the model is capable of distinguishing between classes
+# AUC ROC  Score
+AUC - ROC curve is a performance measurement for the classification problems at various threshold settings. ROC is a probability curve and AUC represents the degree or measure of separability. It tells how much the model is capable of distinguishing between classes.
 
-AUC – ROC SCORE OF ALL MODELS
-
-
+![roc-auc](https://user-images.githubusercontent.com/103363862/189174443-42a0d6aa-ccf0-4e28-8eba-3bd0f1ec319b.png)
 
 
 
-5) COMPARING MODELS
+# SHAPASH model explanatory
+
+![shapash](https://user-images.githubusercontent.com/103363862/189175262-18572736-a729-4cd7-a51a-9420a17225e2.png)
 
 
 
 
-6. Conclusion and Future scope 
-Conclusion- It was a great learning experience working on a Bank dataset.
-From the above model explanatory tool we have seen that poutcome 
-Unknown is the most important feature while predicting our target variable also from the table we can see that when the poutcome is 0 then it contribute in the negative way and increases the probability of predicting 0.
+
+
+
+
+# Conclusion and Future scope 
+
+
+
+# Conclusion- 
+
+It was a great learning experience working on a Bank dataset.
+
+From the above model explanatory tool we have seen that poutcome Unknown is the most important feature while predicting our target variable also from the table we can see that when the poutcome is 0 then it contribute in the negative way and increases the probability of predicting 0.
+
 Marital married is the second most important feature for predicting target when the marital married  then it will affect positively and increases the probability of predicting 1.
+
 Also age cat stable variable affect positively on the target variable when the age of clients is stable then it will increases the probability of predicting 1 that means it higher the probability that client will subscribe for term deposit.
+
 Also education secondary affects positively on the target variable when the client education is secondary then it increases the probability that client will agree to subscribe for term deposit.
 
+
 From the above project we can conclude that XG boost classifier is the best fit classification model for predicting weather the client agree to subscribe for personal loan or not.
+
 When we Hypertuned these XG Boost classifier the accuracy of the model increases by 1 % So it predicts 94% prediction correctly.
 There are some important feature for predicting our target variable we use Shapash  model explanatory to explore that features.
+
 We visualize 20 feature which are most important while predicting target variable.
 From that feature we conclude that clients age , education ,job and and marital status and outcome of previous campaign are the most important feature for predicting that weather client agree to subscribe for term deposit or not that’s why bank prefer these information to start for new campaign and to target customer.
 
+# Future Scope - 
 
-. Future Scope - 
 Our main objective is to get good precision score for without 'duration' models and good recall score for 'duration' included model. 
+
 So, we can initially formulate the required time to converge a lead using 'duration' included models and then sort out precise leads for 'duration' excluded models using this formulated time. 
+
 Here, the idea is to find out responses for any particular record with varying assumed predefined duration range.
+
 In this way we can help marketing team to get precise leads along with time required to converge that lead and also, those leads that have least probability to converge (if we get no positive response for any assumed duration). Thus, an effective marketing campaign can be executed with maximum leads converging to term deposit. 
